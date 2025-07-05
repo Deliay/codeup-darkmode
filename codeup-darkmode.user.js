@@ -21,7 +21,7 @@
                 }
                 clearInterval(iid);
             }
-        }, 200);
+        }, 500);
     }
 
     function setAlways(selector, fn) {
@@ -35,7 +35,7 @@
                     fn(e);
                 });
             }
-        }, 200);
+        }, 500);
     }
 
     const meta = document.createElement('style');
@@ -63,8 +63,8 @@ tb-common-sidebar-main-scroll {
         e.style = "color: white !important;"
     }
 
-    set(".file-panel-src-header.file-box-header.use-gp", setToBlack);
-    set(".file-commit-container.commit-wrapper", setToBlack);
+    setAlways(".file-panel-src-header.file-box-header.use-gp", setToBlack);
+    setAlways(".file-commit-container.commit-wrapper", setToBlack);
     set(".tb-common-sidebar-main-scroll", setToBlack);
     set(".commit-wrapper.use-for-card", setToBlack);
     setAlways(".branch-item-title", setColorToWhite);
